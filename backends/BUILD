@@ -7,3 +7,13 @@ cc_library(
         ],
         visibility = ["//visibility:public"],
 )
+
+cc_library(
+        name = "rtlil",
+        srcs = glob(["rtlil/*.cc"]),
+        hdrs = glob(["rtlil/*.h"]),
+        deps = [
+                "//kernel:kernel"
+        ],
+        visibility = ["//visibility:public"],
+)

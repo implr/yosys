@@ -1,6 +1,6 @@
 cc_library(
         name = "bigint",
-        srcs = glob(["bigint/*.cc"]),
+        srcs = glob(["bigint/*.cc"], exclude=["bigint/sample.cc", "bigint/testsuite.cc"]),
         hdrs = glob(["bigint/*.h"]) + glob(["bigint/*.hh"]),
         visibility = ["//visibility:public"],
 )
@@ -28,7 +28,7 @@ cc_library(
 )
 cc_library(
         name = "ezsat",
-        srcs = glob(["ezsat/*.cc"]),
+        srcs = glob(["ezsat/*.cc"], exclude=["ezsat/demo*.cc", "ezsat/puzzle3d.cc", "ezsat/testbench.cc"]),
         hdrs = glob(["ezsat/*.h"]),
         visibility = ["//visibility:public"],
         deps = [":minisat"],

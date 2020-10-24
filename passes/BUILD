@@ -4,8 +4,9 @@ cc_library(
         visibility = ["//kernel:__subpackages__"],
         deps = [
                 "//kernel:kernel",
-                "//backends:ilang",
-                "//frontends:ast",
+                "//backends:rtlil",
+                #"//frontends:ast",
+                "//frontends/verilog:verilog",
                 "//passes/techmap:techmap",
         ],
 )

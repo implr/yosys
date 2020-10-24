@@ -17,6 +17,10 @@ cc_library(
                 "sigtools.h",
                 "utils.h",
                 "yosys.h",
+                "constids.inc",
+                "ffinit.h",
+                "ff.h",
+                "timinginfo.h",
         ],
         deps = [
                 "//libs:sha1",
@@ -49,15 +53,10 @@ cc_library(
         copts = ["-Os", "-fno-ipa-cp-clone"],
         deps = [
                 ":kernel",
-
                 "//backends:ilang",
-
                 "//frontends/verilog:verilog",
-
                 "//libs:ezsat",
-
                 "//passes:cmds",
-
                 "//techlibs/common:common",
         ],
 )
